@@ -76,7 +76,7 @@ const Projects = () => {
           {featuredProjects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <Card key={index} className="glass-card p-0 overflow-hidden group hover:scale-[1.02] transition-all duration-500">
+              <Card key={index} className="ultra-card p-0 overflow-hidden group">
                 <div className="p-8">
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-primary to-gold flex items-center justify-center">

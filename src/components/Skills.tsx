@@ -125,7 +125,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card key={index} className="glass-card p-6 hover:scale-105 transition-all duration-300 group">
+              <Card key={index} className="ultra-card group">
                 <div className="flex items-center space-x-3 mb-6">
                   <div className={`w-12 h-12 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <Icon className="h-6 w-6 text-white" />
