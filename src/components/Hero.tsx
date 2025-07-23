@@ -82,14 +82,6 @@ const Hero = () => {
               >
                 <Github className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
-              <a 
-                href="https://www.cheematalks.site/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
-              >
-                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
-              </a>
             </div>
           </div>
 

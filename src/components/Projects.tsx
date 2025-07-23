@@ -44,14 +44,6 @@ const Projects = () => {
       liveUrl: "https://freelancingdashboard.vercel.app/",
       featured: false
     },
-    {
-      title: "Previous Portfolio Website",
-      description: "My previous portfolio showcasing early projects and development journey in web technologies.",
-      icon: Globe,
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-      liveUrl: "https://www.cheematalks.site/",
-      featured: false
-    }
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
