@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Download, Mail, Github, Linkedin, Globe } from 'lucide-react';
-import profileImage from '@/assets/profile-image.jpg';
+import profileImage from '@/assets/profile-image.png';
 
 const Hero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -91,7 +91,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-gold rounded-3xl blur-2xl opacity-20 scale-105" />
               <div className="relative glass-card p-2 floating">
                 <img 
-                  src="/src/assets/profile-image.jpg" 
+                  src={profileImage} 
                   alt="Deepinder Singh" 
                   className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl"
                 />
