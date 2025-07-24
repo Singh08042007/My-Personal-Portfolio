@@ -29,15 +29,34 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent! 🚀",
-        description: "Thank you for reaching out. I'll get back to you soon!",
+    try {
+      const response = await fetch('https://formspree.io/f/mqaborrl', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent! 🚀",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,13 +102,6 @@ const Contact = () => {
       link: "https://github.com",
       color: "from-gray-700 to-gray-800"
     },
-    {
-      icon: Globe,
-      label: "Portfolio",
-      value: "Visit my site",
-      link: "https://www.cheematalks.site/",
-      color: "from-primary to-primary-glow"
-    }
   ];
 
   return (

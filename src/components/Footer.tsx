@@ -16,11 +16,6 @@ const Footer = () => {
       label: "GitHub"
     },
     {
-      icon: Globe,
-      href: "https://www.cheematalks.site/",
-      label: "Website"
-    },
-    {
       icon: Mail,
       href: "mailto:singhdeepinder416@gmail.com",
       label: "Email"
