@@ -100,22 +100,15 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex space-x-4">
+                  <div className="flex justify-center">
                     <Button 
                       asChild
-                      className="luxury-button flex-1"
+                      className="luxury-button w-full max-w-xs group-hover:scale-105 transition-transform"
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                        <Globe className="mr-2 h-5 w-5" />
+                        View Live Demo
                       </a>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      className="glass-card border-primary/30 hover:border-primary"
-                    >
-                      <Github className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -163,23 +156,16 @@ const Projects = () => {
                     )}
                   </div>
 
-                  <div className="flex space-x-2">
+                  <div className="flex justify-center">
                     <Button 
                       asChild
                       size="sm"
-                      className="flex-1 h-8"
+                      className="luxury-button w-full group-hover:scale-105 transition-transform"
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-1 h-3 w-3" />
-                        View
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                        <Globe className="mr-2 h-4 w-4" />
+                        Live Demo
                       </a>
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="h-8 px-2"
-                    >
-                      <Github className="h-3 w-3" />
                     </Button>
                   </div>
                 </Card>

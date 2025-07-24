@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-6 justify-center lg:justify-start">
+            <div className="flex space-x-4 justify-center lg:justify-start">
               <a 
                 href="https://linkedin.com/in/deepinder-singh-april2007" 
                 target="_blank"
@@ -75,12 +75,36 @@ const Hero = () => {
                 <Linkedin className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/Singh08042007" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
               >
                 <Github className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+              </a>
+              <a 
+                href="https://www.youtube.com/@DeepinderSingh-e5t" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+              >
+                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+              </a>
+              <a 
+                href="https://www.instagram.com/deep__cheema__2007/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+              >
+                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+              </a>
+              <a 
+                href="https://x.com/Singh3364" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+              >
+                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
             </div>
           </div>
