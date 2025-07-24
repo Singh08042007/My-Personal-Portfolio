@@ -91,7 +91,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-gold rounded-3xl blur-2xl opacity-20 scale-105" />
               <div className="relative glass-card p-2 floating">
                 <img 
-                  src={profileImage} 
+                  src="/lovable-uploads/c19c2994-4990-4725-b18a-26a414d521d0.png" 
                   alt="Deepinder Singh" 
                   className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl"
                 />
