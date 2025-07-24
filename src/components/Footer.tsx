@@ -1,4 +1,4 @@
-import { Github, Linkedin, Globe, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Globe, Mail, Heart, ArrowUp, Youtube, Instagram, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
@@ -12,8 +12,23 @@ const Footer = () => {
     },
     {
       icon: Github,
-      href: "https://github.com",
+      href: "https://github.com/Singh08042007",
       label: "GitHub"
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@DeepinderSingh-e5t",
+      label: "YouTube"
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/deep__cheema__2007/",
+      label: "Instagram"
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/Singh3364",
+      label: "X (Twitter)"
     },
     {
       icon: Mail,

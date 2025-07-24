@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, Download, Mail, Github, Linkedin, Globe } from 'lucide-react';
+import { ChevronDown, Download, Mail, Github, Linkedin, Globe, Youtube, Instagram, Twitter } from 'lucide-react';
 import profileImage from '@/assets/profile-image.png';
 
 const Hero = () => {
@@ -71,6 +71,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
@@ -79,6 +80,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+                aria-label="GitHub"
               >
                 <Github className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
@@ -87,24 +89,27 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+                aria-label="YouTube"
               >
-                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+                <Youtube className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://www.instagram.com/deep__cheema__2007/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+                aria-label="Instagram"
               >
-                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+                <Instagram className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://x.com/Singh3364" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 glass-card hover:scale-110 transition-all duration-300 group"
+                aria-label="X (Twitter)"
               >
-                <Globe className="h-6 w-6 text-primary group-hover:text-primary-glow" />
+                <Twitter className="h-6 w-6 text-primary group-hover:text-primary-glow" />
               </a>
             </div>
           </div>
