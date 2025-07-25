@@ -183,7 +183,10 @@ const Projects = () => {
             <p className="text-muted-foreground mb-6">
               I'm always excited to work on innovative projects and contribute to meaningful solutions.
             </p>
-            <Button className="luxury-button">
+            <Button 
+              className="luxury-button"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Let's Work Together
             </Button>
           </div>
