@@ -61,14 +61,14 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'glass-card border-b border-primary/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-primary to-gold flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DS</span>
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-primary to-gold flex items-center justify-center">
+              <span className="text-white font-bold text-xs sm:text-sm">DS</span>
             </div>
-            <span className="text-lg font-bold gradient-text">Deepinder Singh</span>
+            <span className="text-base sm:text-lg font-bold gradient-text">Deepinder Singh</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -98,7 +98,7 @@ const Navigation = () => {
             </Button>
             <Button 
               onClick={() => scrollToSection('#contact')}
-              className="luxury-button"
+              className="luxury-button text-sm px-4 py-2"
             >
               Hire Me
             </Button>

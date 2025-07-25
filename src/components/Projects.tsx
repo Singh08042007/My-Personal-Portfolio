@@ -175,16 +175,17 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
+        {/* CTA Section */}
+        <div className="text-center animate-slide-up">
+          <div className="glass-card p-6 sm:p-8 max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
               Interested in <span className="gradient-text">Collaboration?</span>
             </h3>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
               I'm always excited to work on innovative projects and contribute to meaningful solutions.
             </p>
             <Button 
-              className="luxury-button"
+              className="luxury-button px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Let's Work Together

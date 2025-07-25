@@ -129,35 +129,35 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to collaborate on innovative projects or discuss opportunities? 
             I'd love to hear from you!
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-gold mx-auto rounded-full mt-6" />
+          <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-primary to-gold mx-auto rounded-full mt-4 sm:mt-6" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <Card className="glass-card p-8">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-primary to-gold flex items-center justify-center">
-                <MessageCircle className="h-6 w-6 text-white" />
+          <Card className="glass-card p-6 sm:p-8 animate-slide-up">
+            <div className="flex items-center space-x-3 mb-6 sm:mb-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-r from-primary to-gold flex items-center justify-center">
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground">Send a Message</h3>
-                <p className="text-muted-foreground">Let's start a conversation</p>
+                <h3 className="text-lg sm:text-xl font-bold text-foreground">Send a Message</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">Let's start a conversation</p>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid md:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Your Name *
@@ -169,7 +169,7 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="glass-card border-primary/30 focus:border-primary"
+                    className="glass-card border-primary/30 focus:border-primary text-sm sm:text-base"
                     placeholder="John Doe"
                   />
                 </div>
@@ -184,7 +184,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="glass-card border-primary/30 focus:border-primary"
+                    className="glass-card border-primary/30 focus:border-primary text-sm sm:text-base"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -201,7 +201,7 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="glass-card border-primary/30 focus:border-primary"
+                  className="glass-card border-primary/30 focus:border-primary text-sm sm:text-base"
                   placeholder="Project Collaboration"
                 />
               </div>
@@ -217,14 +217,14 @@ const Contact = () => {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="glass-card border-primary/30 focus:border-primary resize-none"
+                  className="glass-card border-primary/30 focus:border-primary resize-none text-sm sm:text-base"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
 
               <Button 
                 type="submit" 
-                className="luxury-button w-full"
+                className="luxury-button w-full py-3 sm:py-4 text-sm sm:text-base"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -243,21 +243,21 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 animate-scale-in">
             {/* Contact Details */}
-            <Card className="glass-card p-8">
-              <h3 className="text-xl font-bold text-foreground mb-6">Get in Touch</h3>
-              <div className="space-y-6">
+            <Card className="glass-card p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">Get in Touch</h3>
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((item, index) => {
                   const Icon = item.icon;
                   const content = (
-                    <div className="flex items-center space-x-4 p-4 rounded-lg hover:bg-primary/5 transition-colors">
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Icon className="h-5 w-5 text-primary" />
+                    <div className="flex items-center space-x-4 p-3 sm:p-4 rounded-lg hover:bg-primary/5 transition-colors">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-muted-foreground">{item.label}</p>
-                        <p className="text-foreground">{item.value}</p>
+                        <p className="text-xs sm:text-sm font-medium text-muted-foreground">{item.label}</p>
+                        <p className="text-sm sm:text-base text-foreground">{item.value}</p>
                       </div>
                     </div>
                   );
@@ -276,9 +276,9 @@ const Contact = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass-card p-8">
-              <h3 className="text-xl font-bold text-foreground mb-6">Connect Online</h3>
-              <div className="space-y-4">
+            <Card className="glass-card p-6 sm:p-8">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4 sm:mb-6">Connect Online</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {socialLinks.map((social, index) => {
                   const Icon = social.icon;
                   return (
@@ -287,15 +287,15 @@ const Contact = () => {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 rounded-lg border border-primary/20 hover:border-primary/50 transition-all duration-300 group hover:scale-[1.02]"
+                      className="block p-3 sm:p-4 rounded-lg border border-primary/20 hover:border-primary/50 transition-all duration-300 group hover:scale-[1.02]"
                     >
                       <div className="flex items-center space-x-4">
-                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${social.color} flex items-center justify-center`}>
-                          <Icon className="h-5 w-5 text-white" />
+                        <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-r ${social.color} flex items-center justify-center`}>
+                          <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                         </div>
                         <div>
-                          <p className="text-sm font-medium text-muted-foreground">{social.label}</p>
-                          <p className="text-foreground group-hover:text-primary transition-colors">
+                          <p className="text-xs sm:text-sm font-medium text-muted-foreground">{social.label}</p>
+                          <p className="text-sm sm:text-base text-foreground group-hover:text-primary transition-colors">
                             {social.value}
                           </p>
                         </div>
@@ -307,17 +307,17 @@ const Contact = () => {
             </Card>
 
             {/* Quick Action */}
-            <Card className="glass-card p-8 text-center">
-              <h3 className="text-lg font-bold text-foreground mb-4">
+            <Card className="glass-card p-6 sm:p-8 text-center">
+              <h3 className="text-base sm:text-lg font-bold text-foreground mb-3 sm:mb-4">
                 Ready to Start a Project?
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 Let's discuss how we can bring your ideas to life with cutting-edge technology.
               </p>
-              <div className="space-y-3">
+              <div className="space-y-2 sm:space-y-3">
                 <Button 
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="luxury-button w-full"
+                  className="luxury-button w-full py-2 sm:py-3 text-sm sm:text-base"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />
                   Let's Work Together
@@ -325,7 +325,7 @@ const Contact = () => {
                 <Button 
                   asChild
                   variant="outline"
-                  className="gold-button w-full"
+                  className="gold-button w-full py-2 sm:py-3 text-sm sm:text-base"
                 >
                   <a href="mailto:singhdeepinder416@gmail.com">
                     <Mail className="mr-2 h-4 w-4" />
