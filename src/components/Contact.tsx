@@ -12,7 +12,10 @@ import {
   Linkedin, 
   Github, 
   Globe,
-  MessageCircle
+  MessageCircle,
+  Youtube,
+  Instagram,
+  Twitter
 } from 'lucide-react';
 
 const Contact = () => {
@@ -99,9 +102,30 @@ const Contact = () => {
       icon: Github,
       label: "GitHub",
       value: "View my code",
-      link: "https://github.com",
+      link: "https://github.com/Singh08042007",
       color: "from-gray-700 to-gray-800"
     },
+    {
+      icon: Youtube,
+      label: "YouTube",
+      value: "Watch my content",
+      link: "https://www.youtube.com/@DeepinderSingh-e5t",
+      color: "from-red-500 to-red-600"
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      value: "Follow my journey",
+      link: "https://www.instagram.com/deep__cheema__2007/",
+      color: "from-pink-500 to-purple-600"
+    },
+    {
+      icon: Twitter,
+      label: "X (Twitter)",
+      value: "Latest updates",
+      link: "https://x.com/Singh3364",
+      color: "from-gray-800 to-black"
+    }
   ];
 
   return (
@@ -290,15 +314,25 @@ const Contact = () => {
               <p className="text-muted-foreground mb-6">
                 Let's discuss how we can bring your ideas to life with cutting-edge technology.
               </p>
-              <Button 
-                asChild
-                className="gold-button"
-              >
-                <a href="mailto:singhdeepinder416@gmail.com">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Email Me Directly
-                </a>
-              </Button>
+              <div className="space-y-3">
+                <Button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="luxury-button w-full"
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Let's Work Together
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline"
+                  className="gold-button w-full"
+                >
+                  <a href="mailto:singhdeepinder416@gmail.com">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Email Me Directly
+                  </a>
+                </Button>
+              </div>
             </Card>
           </div>
         </div>
