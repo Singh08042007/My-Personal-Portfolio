@@ -17,4 +17,4 @@ Dark/Light Mode Toggle for user-friendly viewing
 SEO-friendly with optimized metadata and social sharing support
 
 ## Live Demo
--- https://www.cheematalks.site/
+--> https://www.cheematalks.site/
