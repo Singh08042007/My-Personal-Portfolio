@@ -1,7 +1,7 @@
 # Personal AI-Enhanced Portfolio
 Welcome to my personal developer portfolio — crafted with passion, powered by Loavable AI, and deployed seamlessly via Vercel. This website showcases my journey, projects, skills, and aspirations in the field of tech, AI, and design. Built with modern web technologies and focused on clean design, performance, and user experience.
 
-Features
+## Features
 AI-Generated Design with Loavable AI for layout inspiration and aesthetic appeal
 
 Deployed on Vercel for blazing-fast global performance
