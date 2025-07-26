@@ -176,7 +176,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         {/* CTA Section */}
-        <div className="text-center animate-slide-up">
+        <div className="text-center animate-slide-up mt-20">
           <div className="glass-card p-6 sm:p-8 max-w-2xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
               Interested in <span className="gradient-text">Collaboration?</span>
