@@ -53,12 +53,19 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button className="luxury-button text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
+              <Button 
+                className="luxury-button text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+                onClick={() => window.open('https://deepindersinghresume.netlify.app/', '_blank')}
+              >
                 <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Download Resume
               </Button>
-              <Button variant="outline" className="gold-button text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4">
+              <Button 
+                variant="outline" 
+                className="gold-button text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Contact Me
               </Button>
