@@ -24,13 +24,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
       <div className="absolute top-10 left-10 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 bg-gold/10 rounded-full blur-3xl animate-pulse delay-1000" />
       
-      <div className="container mx-auto px-3 sm:px-6 py-12 sm:py-16 lg:py-20 relative z-10">
+      <div className="container mx-auto px-3 sm:px-6 py-8 sm:py-12 lg:py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left animate-fade-in">
@@ -145,10 +145,11 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-6 sm:bottom-8 lg:bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={scrollToAbout}
-            className="p-2 sm:p-3 rounded-full border border-primary/30 hover:border-primary transition-all duration-300 group glass-card"
+            className="p-3 sm:p-4 rounded-full border border-primary/30 hover:border-primary transition-all duration-300 group glass-card backdrop-blur-md"
+            aria-label="Scroll to About section"
           >
             <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6 text-primary animate-bounce group-hover:text-primary-glow" />
           </button>
