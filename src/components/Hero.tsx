@@ -72,51 +72,51 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 justify-center lg:justify-start px-2 lg:px-0">
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start px-2 lg:px-0">
               <a 
                 href="https://linkedin.com/in/deepinder-singh-april2007" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 glass-card hover:scale-110 transition-all duration-300 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group w-12 h-12 flex items-center justify-center rounded-full"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-primary group-hover:text-primary-glow" />
+                <Linkedin className="h-5 w-5 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://github.com/Singh08042007" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 glass-card hover:scale-110 transition-all duration-300 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group w-12 h-12 flex items-center justify-center rounded-full"
                 aria-label="GitHub"
               >
-                <Github className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-primary group-hover:text-primary-glow" />
+                <Github className="h-5 w-5 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://www.youtube.com/@DeepinderSingh-e5t" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 glass-card hover:scale-110 transition-all duration-300 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group w-12 h-12 flex items-center justify-center rounded-full"
                 aria-label="YouTube"
               >
-                <Youtube className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-primary group-hover:text-primary-glow" />
+                <Youtube className="h-5 w-5 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://www.instagram.com/deep__cheema__2007/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 glass-card hover:scale-110 transition-all duration-300 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group w-12 h-12 flex items-center justify-center rounded-full"
                 aria-label="Instagram"
               >
-                <Instagram className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-primary group-hover:text-primary-glow" />
+                <Instagram className="h-5 w-5 text-primary group-hover:text-primary-glow" />
               </a>
               <a 
                 href="https://x.com/Singh3364" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 glass-card hover:scale-110 transition-all duration-300 group min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="p-3 glass-card hover:scale-110 transition-all duration-300 group w-12 h-12 flex items-center justify-center rounded-full"
                 aria-label="X (Twitter)"
               >
-                <Twitter className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-primary group-hover:text-primary-glow" />
+                <Twitter className="h-5 w-5 text-primary group-hover:text-primary-glow" />
               </a>
             </div>
           </div>
