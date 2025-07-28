@@ -128,7 +128,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden glass-card border-t border-primary/20 mt-2">
+        <div className="md:hidden glass-card border-t border-primary/20">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
