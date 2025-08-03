@@ -30,8 +30,8 @@ const Hero = () => {
       <div className="absolute top-10 left-10 sm:top-20 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-10 right-10 sm:bottom-20 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 bg-gold/10 rounded-full blur-3xl animate-pulse delay-1000" />
       
-      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 relative z-10 max-w-full overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-full">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left animate-fade-in">
             <div className="space-y-4">

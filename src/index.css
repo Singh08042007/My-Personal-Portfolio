@@ -124,6 +124,12 @@
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 100vw;
+  }
+
+  html {
+    @apply overflow-x-hidden;
+    max-width: 100vw;
   }
 
   /* Scrollbar Styling */

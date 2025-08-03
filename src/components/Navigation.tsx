@@ -61,8 +61,8 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'glass-card border-b border-primary/20' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+      <div className="container mx-auto px-4 sm:px-6 max-w-full">
+        <div className="flex items-center justify-between h-14 sm:h-16 max-w-full">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-r from-primary to-gold flex items-center justify-center">
@@ -129,7 +129,7 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden glass-card border-t border-primary/20">
-          <div className="container mx-auto px-6 py-4">
+          <div className="container mx-auto px-6 py-4 max-w-full">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <button
