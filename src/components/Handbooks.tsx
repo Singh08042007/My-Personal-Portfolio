@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Download, ExternalLink } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Handbooks = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const handbooks = [
     {
       title: "Hackathons For Complete Beginners",
@@ -15,9 +18,9 @@ const Handbooks = () => {
   ];
 
   return (
-    <section id="handbooks" className="py-20 px-4">
+    <section id="handbooks" className="py-20 px-4" ref={ref}>
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 reveal ${isVisible ? 'active' : ''}`}>
           <h2 className="text-4xl font-bold text-foreground mb-4">
             Written <span className="text-primary">Handbooks</span>
           </h2>
@@ -28,7 +31,7 @@ const Handbooks = () => {
 
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
           {handbooks.map((handbook, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
+            <Card key={index} className={`group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20 reveal ${isVisible ? 'active' : ''}`}>
               <CardHeader>
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">

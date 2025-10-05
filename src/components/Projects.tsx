@@ -1,8 +1,11 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Calculator, Gamepad2, BookOpen, Users, Briefcase, Globe } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const Projects = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const projects = [
     {
       title: "AI-Powered Financial Calculator",
@@ -50,10 +53,10 @@ const Projects = () => {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <section id="projects" className="py-20 relative">
+    <section id="projects" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 reveal ${isVisible ? 'active' : ''}`}>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Featured <span className="gradient-text">Projects</span>
           </h2>
@@ -68,7 +71,7 @@ const Projects = () => {
           {featuredProjects.map((project, index) => {
             const Icon = project.icon;
             return (
-              <Card key={index} className="ultra-card p-0 overflow-hidden group">
+              <Card key={index} className={`ultra-card p-0 overflow-hidden group reveal stagger-${index + 1} ${isVisible ? 'active' : ''}`}>
                 <div className="p-8">
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-primary to-gold flex items-center justify-center">

@@ -11,8 +11,10 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', label: 'Home', href: '#' },
     { id: 'about', label: 'About', href: '#about' },
+    { id: 'experience', label: 'Experience', href: '#experience' },
     { id: 'projects', label: 'Projects', href: '#projects' },
     { id: 'skills', label: 'Skills', href: '#skills' },
+    { id: 'certifications', label: 'Achievements', href: '#certifications' },
     { id: 'contact', label: 'Contact', href: '#contact' }
   ];
 
@@ -58,8 +60,8 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-card border-b border-primary/20' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled ? 'glass-card border-b border-primary/20 shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 max-w-full">
         <div className="flex items-center justify-between h-14 sm:h-16 max-w-full">

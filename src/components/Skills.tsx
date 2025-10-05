@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { 
   Brain, 
   Code, 
@@ -14,6 +15,8 @@ import {
 } from 'lucide-react';
 
 const Skills = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const skillCategories = [
     {
       title: "Core Expertise",
@@ -107,10 +110,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 sm:py-20 relative">
+    <section id="skills" className="py-16 sm:py-20 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+        <div className={`text-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Skills & <span className="gradient-text">Expertise</span>
           </h2>
@@ -125,7 +128,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card key={index} className="ultra-card group animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} className={`ultra-card group reveal stagger-${(index % 6) + 1} ${isVisible ? 'active' : ''}`}>
                 <div className="flex items-center space-x-3 mb-4 sm:mb-6">
                   <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />

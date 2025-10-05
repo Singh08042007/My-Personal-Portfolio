@@ -1,7 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Award, Trophy, GraduationCap } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const Certifications = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const achievements = [
     {
       title: "1st Position, CodeZen Innovate Challenge",
@@ -26,11 +29,11 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-16 sm:py-20 relative">
+    <section id="certifications" className="py-16 sm:py-20 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <div className={`text-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Certifications & <span className="gradient-text">Achievements</span>
             </h2>
@@ -44,8 +47,7 @@ const Certifications = () => {
               return (
                 <Card 
                   key={index} 
-                  className="glass-card p-6 sm:p-8 hover:scale-105 transition-all duration-300 group animate-scale-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className={`glass-card p-6 sm:p-8 hover:scale-105 transition-all duration-300 group reveal stagger-${index + 1} ${isVisible ? 'active' : ''}`}
                 >
                   <div className="flex items-start gap-4">
                     <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full ${achievement.color === 'text-gold' ? 'bg-gold/10' : 'bg-primary/10'} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>

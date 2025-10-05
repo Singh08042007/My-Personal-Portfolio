@@ -1,7 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Briefcase, Calendar, Award } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const Experience = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const experiences = [
     {
       title: "Technical Lead & Coordinator",
@@ -28,11 +31,11 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 sm:py-20 relative">
+    <section id="experience" className="py-16 sm:py-20 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <div className={`text-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Experience & <span className="gradient-text">Leadership</span>
             </h2>
@@ -42,7 +45,7 @@ const Experience = () => {
           {/* Experience Timeline */}
           <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="glass-card p-6 sm:p-8 animate-slide-up hover:scale-[1.02] transition-transform duration-300">
+              <Card key={index} className={`glass-card p-6 sm:p-8 reveal hover:scale-[1.02] transition-transform duration-300 stagger-${index + 1} ${isVisible ? 'active' : ''}`}>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-3">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">

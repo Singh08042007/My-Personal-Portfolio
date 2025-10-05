@@ -8,10 +8,13 @@ import Skills from '@/components/Skills';
 import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import ScrollProgress from '@/components/ScrollProgress';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <ScrollProgress />
       <Navigation />
       <Hero />
       <About />
@@ -22,6 +25,7 @@ const Index = () => {
       <Certifications />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

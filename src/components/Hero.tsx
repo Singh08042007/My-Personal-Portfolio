@@ -130,6 +130,7 @@ const Hero = () => {
                   src="/lovable-uploads/c19c2994-4990-4725-b18a-26a414d521d0.png" 
                   alt="Deepinder Singh" 
                   className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl"
+                  loading="lazy"
                 />
               </div>
               

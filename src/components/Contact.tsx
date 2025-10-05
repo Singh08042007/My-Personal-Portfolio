@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { 
   Mail, 
   Phone, 
@@ -20,6 +21,8 @@ import {
 
 const Contact = () => {
   const { toast } = useToast();
+  const { ref, isVisible } = useScrollReveal();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -129,10 +132,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 sm:py-20 relative">
+    <section id="contact" className="py-16 sm:py-20 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+        <div className={`text-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Let's <span className="gradient-text">Connect</span>
           </h2>

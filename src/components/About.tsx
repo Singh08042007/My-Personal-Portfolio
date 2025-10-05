@@ -1,7 +1,10 @@
 import { Card } from '@/components/ui/card';
 import { Brain, Code, Users, Trophy, Heart, BookOpen } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const About = () => {
+  const { ref, isVisible } = useScrollReveal();
+  
   const highlights = [
     {
       icon: Brain,
@@ -36,11 +39,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 relative">
+    <section id="about" className="py-16 sm:py-20 relative" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <div className={`text-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               About <span className="gradient-text">Me</span>
             </h2>
@@ -48,7 +51,7 @@ const About = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 animate-slide-up">
+          <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 reveal ${isVisible ? 'active' : ''}`}>
             {/* Left - Description */}
             <div className="space-y-6">
               <div className="glass-card p-6 sm:p-8">
@@ -106,7 +109,7 @@ const About = () => {
           </div>
 
           {/* Education Section */}
-          <div className="glass-card p-6 sm:p-8 animate-scale-in">
+          <div className={`glass-card p-6 sm:p-8 reveal ${isVisible ? 'active' : ''}`}>
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-primary to-gold flex items-center justify-center">
                 <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
