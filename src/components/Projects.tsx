@@ -36,7 +36,7 @@ const Projects = () => {
       description: "Comprehensive platform for students to manage academics, events, and campus life efficiently.",
       icon: Users,
       technologies: ["React", "Database", "User Authentication", "Dashboard"],
-      liveUrl: "https://collegemanagment.lovable.app/",
+      liveUrl: "https://collegelifemanager.vercel.app/",
       featured: false
     },
     {
