@@ -12,7 +12,7 @@ const Projects = () => {
       description: "Advanced financial calculator with AI-driven insights for investment planning and financial analysis.",
       icon: Calculator,
       technologies: ["React", "AI/ML", "TypeScript", "Tailwind CSS"],
-      liveUrl: "https://cheemacalculator.vercel.app/",
+      liveUrl: "https://cashcoach.vercel.app/",
       featured: true
     },
     {
